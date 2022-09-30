@@ -43,7 +43,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: |
-          cd ~/home/arifin/calculateJs
+          cd ~/calculateJs
           git pull origin master
           npm install
           pm2 restart all
