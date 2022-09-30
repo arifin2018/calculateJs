@@ -33,6 +33,7 @@ jobs:
   deploy:
     needs: [build]
     runs-on: ubuntu-latest
+    
     steps:
     - name: ssh to bwa deploy server
       uses: appleboy/ssh-action@master
@@ -42,4 +43,4 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: |
-          ll
+          ls
