@@ -43,4 +43,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: |
-          ls
+          cd ~/home/arifin/calculateJs
+          git pull origin master
+          ~/.nvm/versions/node/v12.19.0/bin/npm install
+          ~/.nvm/versions/node/v12.19.0/bin/pm2 restart all
